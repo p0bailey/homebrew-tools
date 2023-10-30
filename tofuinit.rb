@@ -5,11 +5,11 @@
 class Tofuinit < Formula
   desc ""
   homepage "https://github.com/p0bailey/tofuinit"
-  version "1.0.19"
+  version "1.0.20"
 
   on_macos do
-    url "https://github.com/p0bailey/tofuinit/releases/download/1.0.19/tofuinit_darwin_all.zip"
-    sha256 "378c5de21c98e0e1131f1443ab53d187269ad35318394a50ab76427188d4870f"
+    url "https://github.com/p0bailey/tofuinit/releases/download/1.0.20/tofuinit_darwin_all.zip"
+    sha256 "7165d50f0c59e8bdf9550a5285276e4c84f7404954e2ee542f9c94d964e7333c"
 
     def install
       bin.install "tofuinit"
@@ -18,24 +18,24 @@ class Tofuinit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.19/tofuinit_linux_arm.zip"
-      sha256 "bc0e1d8fbb3b19e09b2998dbb49ae258b874cc85a98535d45650c16b4cac0ebb"
-
-      def install
-        bin.install "tofuinit"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.19/tofuinit_linux_arm64.zip"
-      sha256 "fb78ed80c4d433d375c114879f2fdd0e7d1ace06b6134220514410938564f06b"
+      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.20/tofuinit_linux_arm.zip"
+      sha256 "6f5cac17d478881095c84f46459ec5f4410393886678e5989eed7570b176aad1"
 
       def install
         bin.install "tofuinit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.19/tofuinit_linux_amd64.zip"
-      sha256 "4148356e4e04d9b4f3d5802774f7b34501b614a8fa410fc7ebdf08daed79b285"
+      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.20/tofuinit_linux_amd64.zip"
+      sha256 "53619f779a074d6332888eaff96a3ba2892a92d481884743d0f5556d2d4308c1"
+
+      def install
+        bin.install "tofuinit"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.20/tofuinit_linux_arm64.zip"
+      sha256 "2f2ea2d7cbaaf10b0d93a9c8533360ef2ce63f3e7990a599dd60352e5929415a"
 
       def install
         bin.install "tofuinit"
