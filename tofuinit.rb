@@ -5,11 +5,11 @@
 class Tofuinit < Formula
   desc ""
   homepage "https://github.com/p0bailey/tofuinit"
-  version "1.0.31"
+  version "1.0.32"
 
   on_macos do
-    url "https://github.com/p0bailey/tofuinit/releases/download/1.0.31/tofuinit_darwin_all.zip"
-    sha256 "74fcc9c1d2b02066063b081196daf8d7d6dffb8917ff3d0dbc434cc6d517eac3"
+    url "https://github.com/p0bailey/tofuinit/releases/download/1.0.32/tofuinit_darwin_all.zip"
+    sha256 "7487a5b31a41f70da29273e234f1873437456f99efa1e3e4171cdea0da13ccdc"
 
     def install
       bin.install "tofuinit"
@@ -17,25 +17,25 @@ class Tofuinit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.31/tofuinit_linux_arm.zip"
-      sha256 "8a10e267646985b45b4cd1bfe278178f4771f2ae193cdbd486ae576c6e8a03b0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.32/tofuinit_linux_arm64.zip"
+      sha256 "4ce0119e124043fa3e6c905d015d31db8af2d90a5ffbdcedea77c64be625bdf2"
 
       def install
         bin.install "tofuinit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.31/tofuinit_linux_amd64.zip"
-      sha256 "c6c87c7c36f20b9eb0329a1420fcd3f13946675c25291fb74621163516f63d00"
+      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.32/tofuinit_linux_amd64.zip"
+      sha256 "9532ace99d279624588a7e2567bf6a76030b5368a6a93a334ff48923896616f8"
 
       def install
         bin.install "tofuinit"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.31/tofuinit_linux_arm64.zip"
-      sha256 "4551a3c4707b0796146b5b3a464230d485254bbc296eb497c62c79364b702de0"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.32/tofuinit_linux_arm.zip"
+      sha256 "bbde27995f601272c81503102e298ab4c30ddb03fbd2be7f177e36faeec83647"
 
       def install
         bin.install "tofuinit"
