@@ -5,11 +5,11 @@
 class Tofuinit < Formula
   desc ""
   homepage "https://github.com/p0bailey/tofuinit"
-  version "1.0.26"
+  version "1.0.27"
 
   on_macos do
-    url "https://github.com/p0bailey/tofuinit/releases/download/1.0.26/tofuinit_darwin_all.zip"
-    sha256 "1e850bc8ada1beb87e487e023fe99873461c471908a05c5b03761c555b7cbb59"
+    url "https://github.com/p0bailey/tofuinit/releases/download/1.0.27/tofuinit_darwin_all.zip"
+    sha256 "f4e08e698190761e3bbfe807ef96bfac10032b29470328d82e6721e57140074c"
 
     def install
       bin.install "tofuinit"
@@ -18,24 +18,24 @@ class Tofuinit < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.26/tofuinit_linux_amd64.zip"
-      sha256 "ba75a697a1da1b51aa21388c143a348a6d5fdd404cbd69c72a86ad40a7132b14"
+      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.27/tofuinit_linux_amd64.zip"
+      sha256 "222342b00d7e57eebd2a9a0929fd92d5f0d835460fa692f4ee0d20890c7ac6d7"
 
       def install
         bin.install "tofuinit"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.26/tofuinit_linux_arm.zip"
-      sha256 "b3d5f984025c0da98913f9be6d44629a6c74039816b9d597848356d103056495"
+      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.27/tofuinit_linux_arm.zip"
+      sha256 "c0e3f8d07815418d6be9983b91068bdeb3e5a5835b484ff5c98988cee499831d"
 
       def install
         bin.install "tofuinit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.26/tofuinit_linux_arm64.zip"
-      sha256 "2b51aefec1a241f37a75c31e7b5e5719dbffbcdb49805b5ed0257b81937347c0"
+      url "https://github.com/p0bailey/tofuinit/releases/download/1.0.27/tofuinit_linux_arm64.zip"
+      sha256 "9e1faf877503ac05ee6e8cc4d78b6637ed823d132dee095aa8166d98854b85f9"
 
       def install
         bin.install "tofuinit"
